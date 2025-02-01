@@ -1,11 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { LanguageServiceService } from '../../services/language-service.service';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+
+  private languageService = inject(LanguageServiceService)
+  private translate = inject(TranslateService)
+
+changeLanguage(lang: string):void{
+  this.languageService.changeLanguage(lang)
+}
 
 }
