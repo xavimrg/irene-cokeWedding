@@ -1,1 +1,63 @@
 <p>rsvp-form works!</p>
+
+<form [formGroup]="rsvpForm" (ngSubmit)="onSubmit()">
+    <div class="formInput">
+        <label>{{"NOMBRE Y APELLIDO"| translate}}</label>
+        <input type="text" formControlName="nombre" required>
+    </div>
+
+    <div class="formInput">
+        <label>{{"PAREJA"| translate}}</label>
+        <input type="text" formControlName="nombrePareja" required>
+    </div>
+    <p>{{"* ¿HA VARIADO TU SITUACIÓN SENTIMENTAL DESDE QUE RECIBISTE LA INVITACIÓN? HÁZNOSLO SABER YA QUE NUESTRA LISTA DE INVITADOS HA SIDO CUIDADOSAMENTE REALIZADA Y VEREMOS SI PODEMOS REALIZAR ALGÚN CAMBIO."}}</p>
+
+    <div class="select">
+        <label>{{"¿DE QUIEN VIENES TU?"| translate}}</label>
+        <select formControlName="vienePor" required></select>
+        <option value="novia">{{"NOVIA"| translate}}</option>
+        <option value="novio">{{"NOVIO"| translate}}</option>
+        <option value="ambos">{{"AMBOS"| translate}}</option>
+    </div>
+    <div class="select">
+        <label>{{"¿CONFIRMAS ASISTENCIA?"| translate}}</label>
+        <select formControlName="confirmacion" required></select>
+        <option value="si">{{"SI"| translate}}</option>
+        <option value="no">{{"NO"| translate}}</option>
+        <option value="noSe">{{"AUN LO NO SE"| translate}}</option>
+    </div>
+    <div class="select">
+        <label>{{"¿VIENES EN BUS?"| translate}}</label>
+        <select formControlName="bus" required></select>
+        <option value="siBus">{{"SI"| translate}}</option>
+        <option value="noBus">{{"NO"| translate}}</option>
+    </div>
+    <div class="select">
+<label>{{"REQUISITOS ALIMENTICIOS"| translate}}</label>
+<select formControlName="alimentacion" required></select>
+<option value="vegetariano">{{"VEGETARIANO"| translate}}</option>
+<option value="vegano">{{"VEGANO"| translate}}</option>
+<option value="gluten">{{"GLUTEN"| translate}}</option>
+<option value="pescetario">{{"PESCETARIO"| translate}}</option>
+<option value="otros">{{"OTROS"| translate}}</option>
+    </div>
+
+    <div class="select">
+        <label>{{ "ESTAS SOLETERO" | translate}}</label>
+        <select formControlName="soltero"></select>
+        <option value="siSoltero">{{"ESPERANDO A CUPIDO" | translate}}</option>
+        <option value="noSoltero">{{"NO" | translate}}</option>
+    </div>
+    @if(rsvpForm.get('soltero')?.value === 'si'){
+        <div>
+            <label>{{"ADJUNTAR FOTO TINDER" | translate}}</label>
+            <input type="file"(change)="onfileChange($event)">
+            <p>{{"PS. SOLO PODREMOS JUGAR A ESTO SI SUFICIENTES SOLTER@S SE ATREVEN" | translate}}</p>
+        </div>
+    }
+    <div class="formInput">
+        <label>{{"¿QUIERES MANDARNOS ALGUNA CANCION PARA LA FIESTA?"| translate}}</label>
+        <input type="text" formControlName="cancion">
+    </div>
+
+</form>
