@@ -11,6 +11,11 @@ private templateId = '';
 private userId = '';
 
   constructor() { 
-  
+    emailjs.init(this.userId)
+  }
+
+  sendEmail(formData:any){
+    return emailjs.send(this.serviceId, this.templateId, formData)
+
   }
 }
