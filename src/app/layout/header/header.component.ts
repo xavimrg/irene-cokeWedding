@@ -11,7 +11,7 @@ import { LanguageServiceService } from '../../services/language-service.service'
 export class HeaderComponent {
 
   private languageService = inject(LanguageServiceService)
-  private translate = inject(TranslateService)
+
 
 changeLanguage(lang: string):void{
   this.languageService.changeLanguage(lang)

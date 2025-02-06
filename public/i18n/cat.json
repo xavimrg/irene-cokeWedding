@@ -1,3 +1,29 @@
 {
-    "CONFIRMA TU ASISTENCIA": "Confirma la teva assistència"
+    
+        "CONFIRMA TU ASISTENCIA":"Confirma la teva assistència",
+        "NOMBRE Y APELLIDO":"Nom i Cognom", 
+        "PAREJA":"Pareja", 
+        "¿SOYS MÁS DE DOS EN VUESTRA INVITACIÓN? ¡CONFIRMA AL RESTO DE LA FAMILIA O GRUPO!":"Sou més de dos en la vostra invitació? Cónfirma a la resta de la família o grup!",
+        "¿DE QUIEN VIENES TU?":"De qui vens tu?",
+        "AÑADIR MÁS INVITADOS":"Afegir més convidats",
+        "INVITADO":"Convidat",
+        "NOVIO":"Nuvi",
+        "NOVIA":"Núvia",
+        "AMBOS":"Tots dos",
+        "SI":"Si",
+        "NO":"No",
+        "AUN NO SE":"Encara no ho sé",
+        "VIENES EN BUS":"Vens en bus",
+        "NINGUNO":"Cap",
+        "VEGETEARINO":"Vegeteria",
+        "VEGANO":"Vegà",
+        "GLUTEN":"GLUTEN",
+        "PESCETARIO":"Pescetario",
+        "OTROS":"Altres",
+        "¿ESTAS SOLTER@?":"¿Estás solter@?",
+        "ADJUNTAR FOTO TINDER":"Adjuntar foto Tinder",
+        "PS. SOLO PODREMOS JUGAR A ESTO SI SUFICIENTES SOLTER@S SE ATREVEN":"PG. Només podrem jugar a això si els suficients solter@s s'atreveixen.",
+        "* ¿HA VARIADO TU SITUACIÓN SENTIMENTAL DESDE QUE RECIBISTE LA INVITACIÓN? HÁZNOSLO SABER YA QUE NUESTRA LISTA DE INVITADOS HA SIDO CUIDADOSAMENTE REALIZADA Y ESTUDIAREMOS SI PODEMOS REALIZAR ALGÚN CAMBIO.":"Ha variat la teva situació sentimental des que vas rebre la invitació? Fes-nos-ho saber ja que la nostra llista de convidats ha estat acuradament realitzada i estudiarem si podem fer algun canvi.",
+        "QUIERES MANDARNOS ALGUNA CANCION PARA LA FIESTA?":"¿Vols enviar-nos alguna cançó per a la festa?",
+        "¿ALGO QUE COMENTARNOS?":"Alguna cosa que comentar-nos?"
 }

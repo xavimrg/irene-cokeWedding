@@ -1,6 +1,6 @@
 <p>rsvp-form works!</p>
 
-<form [formGroup]="rsvpForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="rsvpForm" (ngSubmit)="sendRsvp($event)">
     <div class="formInput">
         <label>{{"NOMBRE Y APELLIDO"| translate}}</label>
         <input type="text" formControlName="nombre" required>
@@ -8,56 +8,84 @@
 
     <div class="formInput">
         <label>{{"PAREJA"| translate}}</label>
-        <input type="text" formControlName="nombrePareja" required>
+        <input type="text" formControlName="nombrePareja">
     </div>
-    <p>{{"* ¿HA VARIADO TU SITUACIÓN SENTIMENTAL DESDE QUE RECIBISTE LA INVITACIÓN? HÁZNOSLO SABER YA QUE NUESTRA LISTA DE INVITADOS HA SIDO CUIDADOSAMENTE REALIZADA Y VEREMOS SI PODEMOS REALIZAR ALGÚN CAMBIO."}}</p>
+    <p>{{"* ¿HA VARIADO TU SITUACIÓN SENTIMENTAL DESDE QUE RECIBISTE LA INVITACIÓN? HÁZNOSLO SABER YA QUE NUESTRA LISTA DE INVITADOS HA SIDO CUIDADOSAMENTE REALIZADA Y ESTUDIAREMOS SI PODEMOS REALIZAR ALGÚN CAMBIO."}}</p>
+<p>{{"¿SOYS MÁS DE DOS EN VUESTRA INVITACIÓN? ¡CONFIRMA AL RESTO DE LA FAMILIA O GRUPO!"}}</p>
+<button type="button" (click)="showMoreInputs()">{{"AÑADIR MÁS INVITADOS" | translate}}</button>
+@if(showInputs){
+    <div class="formInput">
+        <label>{{"INVITADO"| translate}}</label>
+        <input type="text" formControlName="invitado1">
+    </div>
+    <div class="formInput">
+        <label>{{"INVITADO"| translate}}</label>
+        <input type="text" formControlName="invitado2">
+    </div>
+
+}
 
     <div class="select">
         <label>{{"¿DE QUIEN VIENES TU?"| translate}}</label>
-        <select formControlName="vienePor" required></select>
-        <option value="novia">{{"NOVIA"| translate}}</option>
-        <option value="novio">{{"NOVIO"| translate}}</option>
-        <option value="ambos">{{"AMBOS"| translate}}</option>
+        <select formControlName="vienePor" required>
+            <option value="novia">{{"NOVIA"| translate}}</option>
+            <option value="novio">{{"NOVIO"| translate}}</option>
+            <option value="ambos">{{"AMBOS"| translate}}</option>
+        </select>
+
     </div>
     <div class="select">
         <label>{{"¿CONFIRMAS ASISTENCIA?"| translate}}</label>
-        <select formControlName="confirmacion" required></select>
-        <option value="si">{{"SI"| translate}}</option>
-        <option value="no">{{"NO"| translate}}</option>
-        <option value="noSe">{{"AUN LO NO SE"| translate}}</option>
+        <select formControlName="confirmacion" required>
+            <option value="si">{{"SI"| translate}}</option>
+            <option value="no">{{"NO"| translate}}</option>
+            <option value="noSe">{{"AUN LO NO SE"| translate}}</option>
+        </select>
     </div>
     <div class="select">
         <label>{{"¿VIENES EN BUS?"| translate}}</label>
-        <select formControlName="bus" required></select>
-        <option value="siBus">{{"SI"| translate}}</option>
-        <option value="noBus">{{"NO"| translate}}</option>
+        <select formControlName="bus">
+            <option value="siBus">{{"SI"| translate}}</option>
+            <option value="noBus">{{"NO"| translate}}</option>
+        </select>
+       
     </div>
     <div class="select">
-<label>{{"REQUISITOS ALIMENTICIOS"| translate}}</label>
-<select formControlName="alimentacion" required></select>
-<option value="vegetariano">{{"VEGETARIANO"| translate}}</option>
-<option value="vegano">{{"VEGANO"| translate}}</option>
-<option value="gluten">{{"GLUTEN"| translate}}</option>
-<option value="pescetario">{{"PESCETARIO"| translate}}</option>
-<option value="otros">{{"OTROS"| translate}}</option>
+        <label>{{"REQUISITOS ALIMENTICIOS"| translate}}</label>
+        <select formControlName="alimentacion" required>
+            <option value="ninguno">{{"NINGUNO" | translate}}</option>
+            <option value="vegetariano">{{"VEGETARIANO"| translate}}</option>
+            <option value="vegano">{{"VEGANO"| translate}}</option>
+            <option value="gluten">{{"GLUTEN"| translate}}</option>
+            <option value="pescetario">{{"PESCETARIO"| translate}}</option>
+            <option value="otros">{{"OTROS"| translate}}</option>
+        </select>
+
+        <textarea formControlName="comentariosAlimentacion" placeholder="Comentarios adicionales"></textarea>
     </div>
 
-    <div class="select">
-        <label>{{ "ESTAS SOLETERO" | translate}}</label>
-        <select formControlName="soltero"></select>
+    <!-- <div class="select">
+        <label>{{ "ESTAS SOLTERO" | translate}}</label>
+       <select formControlName="soltero">
         <option value="siSoltero">{{"ESPERANDO A CUPIDO" | translate}}</option>
         <option value="noSoltero">{{"NO" | translate}}</option>
-    </div>
-    @if(rsvpForm.get('soltero')?.value === 'si'){
-        <div>
-            <label>{{"ADJUNTAR FOTO TINDER" | translate}}</label>
-            <input type="file"(change)="onfileChange($event)">
-            <p>{{"PS. SOLO PODREMOS JUGAR A ESTO SI SUFICIENTES SOLTER@S SE ATREVEN" | translate}}</p>
-        </div>
-    }
+       </select>
+
+     </div>
+     @if(rsvpForm.get('soltero')?.value === 'si'){
+     <div>
+         <label>{{"ADJUNTAR FOTO TINDER" | translate}}</label>
+         <input type="file" (change)="onfileChange($event)">
+         <p>{{"PS. SOLO PODREMOS JUGAR A ESTO SI SUFICIENTES SOLTER@S SE ATREVEN" | translate}}</p>
+     </div>
+     } -->
     <div class="formInput">
         <label>{{"¿QUIERES MANDARNOS ALGUNA CANCION PARA LA FIESTA?"| translate}}</label>
         <input type="text" formControlName="cancion">
     </div>
-<button type="submit"[disabled]="rsvpForm.invalid">{{"ENVIAR CONFIRMACIÓN"| translate}}</button>
+    <div class="formInput">
+        <label>{{"¿ALGO QUE COMENTARNOS?"| translate}}</label>
+        <input type="text" formControlName="comentario">
+    </div>
+    <button type="submit" [disabled]="rsvpForm.invalid">{{"ENVIAR CONFIRMACIÓN"| translate}}</button>
 </form>
