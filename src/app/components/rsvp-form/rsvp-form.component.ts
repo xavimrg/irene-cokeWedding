@@ -20,12 +20,12 @@ showInputs: boolean = false;
 ngOnInit(): void {
   this.rsvpForm = this.fb.group({
     nombre: ['', Validators.required],
-    nombrePareja: ['', Validators],
+    nombrePareja: ['',],
     invitado1: [''],
     invitado2: [''],
     vienePor: ['', Validators.required],
     confirmacion: ['', Validators.required],
-    bus: ['', Validators],
+    bus: ['', ],
     alimentacion: ['', Validators.required],
     comentariosAlimentacion: [''],
     cancion: [''],

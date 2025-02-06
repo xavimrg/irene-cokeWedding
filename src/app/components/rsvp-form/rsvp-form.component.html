@@ -3,7 +3,7 @@
 <form [formGroup]="rsvpForm" (ngSubmit)="sendRsvp($event)">
     <div class="formInput">
         <label>{{"NOMBRE Y APELLIDO"| translate}}</label>
-        <input type="text" formControlName="nombre" required>
+        <input type="text" formControlName="nombre" >
     </div>
 
     <div class="formInput">
@@ -27,7 +27,7 @@
 
     <div class="select">
         <label>{{"¿DE QUIEN VIENES TU?"| translate}}</label>
-        <select formControlName="vienePor" required>
+        <select formControlName="vienePor">
             <option value="novia">{{"NOVIA"| translate}}</option>
             <option value="novio">{{"NOVIO"| translate}}</option>
             <option value="ambos">{{"AMBOS"| translate}}</option>
@@ -36,7 +36,7 @@
     </div>
     <div class="select">
         <label>{{"¿CONFIRMAS ASISTENCIA?"| translate}}</label>
-        <select formControlName="confirmacion" required>
+        <select formControlName="confirmacion">
             <option value="si">{{"SI"| translate}}</option>
             <option value="no">{{"NO"| translate}}</option>
             <option value="noSe">{{"AUN LO NO SE"| translate}}</option>
@@ -52,7 +52,7 @@
     </div>
     <div class="select">
         <label>{{"REQUISITOS ALIMENTICIOS"| translate}}</label>
-        <select formControlName="alimentacion" required>
+        <select formControlName="alimentacion">
             <option value="ninguno">{{"NINGUNO" | translate}}</option>
             <option value="vegetariano">{{"VEGETARIANO"| translate}}</option>
             <option value="vegano">{{"VEGANO"| translate}}</option>
