@@ -29,7 +29,8 @@ ngOnInit(): void {
     alimentacion: ['', Validators.required],
     comentariosAlimentacion: [''],
     cancion: [''],
-    comentario: ['']
+    comentario: [''],
+    mail:['']
   });
 }
 

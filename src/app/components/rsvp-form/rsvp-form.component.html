@@ -10,7 +10,7 @@
         <label>{{"PAREJA"| translate}}</label>
         <input type="text" formControlName="nombrePareja">
     </div>
-    <p>{{"* ¿HA VARIADO TU SITUACIÓN SENTIMENTAL DESDE QUE RECIBISTE LA INVITACIÓN? HÁZNOSLO SABER YA QUE NUESTRA LISTA DE INVITADOS HA SIDO CUIDADOSAMENTE REALIZADA Y ESTUDIAREMOS SI PODEMOS REALIZAR ALGÚN CAMBIO."}}</p>
+    <p>*{{"NOS ENCANTARÍA QUE TODOS NUESTROS SERES QUERIDOS ESTUVIERAN CON NOSOTROS EN ESTE DÍA TAN ESPECIAL, Y PARA ELLO, NUESTRAS INVITACIONES HAN SIDO CUIDADOSAMENTE PERSONALIZADAS CON EL NOMBRE DE CADA INVITADO. SI TIENES ALGUNA DUDA O PREGUNTA SOBRE TU INVITACIÓN, NO DUDES EN CONTACTARNOS."}}</p>
 <p>{{"¿SOYS MÁS DE DOS EN VUESTRA INVITACIÓN? ¡CONFIRMA AL RESTO DE LA FAMILIA O GRUPO!"}}</p>
 <button type="button" (click)="showMoreInputs()">{{"AÑADIR MÁS INVITADOS" | translate}}</button>
 @if(showInputs){
@@ -87,5 +87,10 @@
         <label>{{"¿ALGO QUE COMENTARNOS?"| translate}}</label>
         <input type="text" formControlName="comentario">
     </div>
+<div class="formInput">
+<label>{{"¿QUIERES RECIBIR COPIA DE LA CONFIRMACIÓN POR EMAIL?" | translate}}</label>
+<input type="text" formControlName="mail" id="">
+</div>
+
     <button type="submit" [disabled]="rsvpForm.invalid">{{"ENVIAR CONFIRMACIÓN"| translate}}</button>
 </form>
