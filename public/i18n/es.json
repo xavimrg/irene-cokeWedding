@@ -1,4 +1,6 @@
 {
+
+
 "CONFIRMA TU ASISTENCIA":"Confirma tu asistencia ",
 "NOMBRE Y APELLIDO":"Nombre y Apellido", 
 "PAREJA":"Pareja", 
@@ -26,4 +28,13 @@
 "QUIERES MANDARNOS ALGUNA CANCION PARA LA FIESTA?":"¿Quieres mandarnos alguna canción para la fiesta?",
 "¿ALGO QUE COMENTARNOS?":"¿Algo que comentarnos?",
 "¿QUIERES RECIBIR COPIA DE LA CONFIRMACIÓN POR EMAIL?":"¿Quieres recibir copia de la confimarción por email?", 
-"NOS ENCANTARÍA QUE TODOS NUESTROS SERES QUERIDOS ESTUVIERAN CON NOSOTROS EN ESTE DÍA TAN ESPECIAL, Y PARA ELLO, NUESTRAS INVITACIONES HAN SIDO CUIDADOSAMENTE PERSONALIZADAS CON EL NOMBRE DE CADA INVITADO. SI TIENES ALGUNA DUDA O PREGUNTA SOBRE TU INVITACIÓN, NO DUDES EN CONTACTARNOS.":"Nos encantaría que todos nuestros seres queridos estuvieran con nosotros en este día tan especial, y para ello, nuestras invitaciones han sido cuidadosamente personalizadas con el nombre de cada invitado. Si tienes alguna duda o pregunta sobre tu invitación, no dudes en contactarnos. "}
+"NOS ENCANTARÍA QUE TODOS NUESTROS SERES QUERIDOS ESTUVIERAN CON NOSOTROS EN ESTE DÍA TAN ESPECIAL, Y PARA ELLO, NUESTRAS INVITACIONES HAN SIDO CUIDADOSAMENTE PERSONALIZADAS CON EL NOMBRE DE CADA INVITADO. SI TIENES ALGUNA DUDA O PREGUNTA SOBRE TU INVITACIÓN, NO DUDES EN CONTACTARNOS.":"Nos encantaría que todos nuestros seres queridos estuvieran con nosotros en este día tan especial, y para ello, nuestras invitaciones han sido cuidadosamente personalizadas con el nombre de cada invitado. Si tienes alguna duda o pregunta sobre tu invitación, no dudes en contactarnos.",
+
+
+"MESES":"Meses",
+"SEMANAS":"Semanas",
+"DIAS":"Días",
+"HORAS":"Horas",
+"MINUTOS":"Minutos",
+"SEGUNDOS":"Segundos"
+}
