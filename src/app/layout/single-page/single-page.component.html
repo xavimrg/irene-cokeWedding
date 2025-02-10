@@ -1,11 +1,11 @@
 <app-header class="header"></app-header>
 <section id="landing-page">
+    <div id="love-container">
+        <img src="assets/dubai.jpeg" class="love-img">
+    </div>
     <app-countdown></app-countdown>
 </section>
-<section id="rsvp-page">
-    <p>{{ "CONFIRMA TU ASISTENCIA" | translate}}</p>
-    <app-rsvp-form></app-rsvp-form>
-</section>
+
 <section id="our-love-story">
     <h1>{{ "NUESTRA HISTORIA DE AMOR" | translate}}</h1>
     <p>{{ "LA HISTORIA"| translate}}</p>
@@ -13,6 +13,10 @@
 </section>
 <section id="when-where">
     <app-google-maps></app-google-maps>
+</section>
+<section id="rsvp-page">
+    <p>{{ "CONFIRMA TU ASISTENCIA" | translate}}</p>
+    <app-rsvp-form></app-rsvp-form>
 </section>
 <section id="presents">
 
