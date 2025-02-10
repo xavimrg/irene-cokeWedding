@@ -1,3 +1,6 @@
-<p>header works!</p>
-<button (click)="changeLanguage('cat')">Català</button>
+<button [routerLink]="[]" fragment="landing-page">{{"NOS CASAMOS"| translate}}</button>
+<button [routerLink]="[]" fragment="our-love-story">{{"NUESTRA HISTORIA" | translate}}</button>
+<button [routerLink]="[]" fragment="when-where">{{"¿DONDE?"}}</button>
+<button [routerLink]="[]" fragment="rsvp-page">RSVP</button>
+<button  (click)="changeLanguage('cat')">Català</button>
 <button (click)="changeLanguage('es')">Castellano</button>

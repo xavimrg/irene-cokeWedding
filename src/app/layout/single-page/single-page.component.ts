@@ -4,13 +4,18 @@ import { TranslateModule } from '@ngx-translate/core';
 import { RsvpFormComponent } from "../../components/rsvp-form/rsvp-form.component";
 import { CountdownComponent } from "../../components/countdown/countdown.component";
 import { GoogleMapsComponent } from "../../components/google-maps/google-maps.component";
+import { CaurroselComponent } from "../../components/caurrosel/caurrosel.component";
 
 @Component({
   selector: 'app-single-page',
-  imports: [HeaderComponent, TranslateModule, RsvpFormComponent, CountdownComponent, GoogleMapsComponent],
+  imports: [HeaderComponent, TranslateModule, RsvpFormComponent, CountdownComponent, GoogleMapsComponent, CaurroselComponent],
   templateUrl: './single-page.component.html',
   styleUrl: './single-page.component.scss'
 })
 export class SinglePageComponent {
 
+
+
 }
+
+
