@@ -1,3 +1,9 @@
+[build]
+  command = "ng build --configuration=production"
+  publish = "dist/irene-coke-wedding"
+
+
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

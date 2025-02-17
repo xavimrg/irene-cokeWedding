@@ -1,0 +1,39 @@
+
+
+#rsvpForm{
+    // background-color: #ffd6a3;
+    background-color:   #fef4d1;
+    width: 45vw;
+    padding: 1vw;
+    border: solid 0.5px #142f30;
+    
+
+}
+
+.formInput{
+
+    margin-bottom: 1vh;
+
+}
+
+.formInput label{
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea, select{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+margin: 1vh;
+background-color: #fef7e0;
+border: solid 0.5px #142f30;
+}
+
+p{
+    text-align: justify;
+    text-justify: inter-word;
+}
