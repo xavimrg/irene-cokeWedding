@@ -1,9 +1,14 @@
 <app-header class="header"></app-header>
 <section id="landing-page">
-    <div id="love-container">
-        <img src="assets/dubai.jpeg" class="love-img">
+    <div class="tittle" [class.hidden]="scrollProgress() > 0.1">
+        <h1>SAVE THE DATE 28/06/25</h1>
+        <h1>IRENE & JORGE</h1>
     </div>
-    <app-countdown></app-countdown>
+
+    <div id="love-container" [ngStyle]="{ width: circleSize +'px', height: circleSize + 'px'}">
+        <img src="assets/img/dubai.jpeg" class="love-img">
+    </div>
+    <app-countdown class="countdown" [class.hidden]="scrollProgress() > 0.1"></app-countdown >
 </section>
 
 <section id="our-love-story">
@@ -24,7 +29,7 @@
    
 </section>
 <section id="rsvp-page">
-    <p>{{ "CONFIRMA TU ASISTENCIA" | translate}}</p>
+    <h1>{{ "CONFIRMA TU ASISTENCIA" | translate}}</h1>
     <app-rsvp-form></app-rsvp-form>
 </section>
 <section id="presents">
