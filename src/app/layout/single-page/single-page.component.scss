@@ -4,18 +4,32 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-
+    background: transparent;
+    box-shadow:  0 2px 5px gba(0, 0, 0, 0.2);
+    padding: 0;  /* Asegúrate de que no haya relleno adicional */
+    margin: 0;   /* Asegúrate de que no haya margen adicional */
 }
+
+.header.sticky {
+  background: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+}
+
 
 section{
+
     width: 100vw;
-    height: 95vh;
+    height: calc(100vh - 5vh);  /* Resto del espacio tras el header */
+    overflow: hidden; /* Para evitar que el contenido se desborde */
 }
+
 
 
 
 #landing-page {
-    background-color: #142f30;
+    background: url('/assets/img/dubai2.jpeg') no-repeat center center / cover;
+    background-attachment: fixed;
+    background-size: cover;
+    margin-top: -5vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,8 +39,11 @@ section{
     position: relative;
     overflow: hidden;
     padding: 20px;
+
+    
+
   
-    .tittle {
+    .landing-tittle {
       position: absolute;
       top: 10%;
       z-index: 2;
@@ -66,7 +83,7 @@ section{
       position: absolute;
       bottom: 10%;
       z-index: 2;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       color: #fff;
       transition: opacity 0.5s ease-in-out;
   

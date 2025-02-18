@@ -23,7 +23,7 @@ ngOnInit(): void {
     nombrePareja: ['',],
     invitado1: [''],
     invitado2: [''],
-    vienePor: ['', Validators.required],
+    // vienePor: ['', Validators.required],
     confirmacion: ['', Validators.required],
     bus: ['', ],
     alimentacion: ['', Validators.required],

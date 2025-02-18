@@ -1,18 +1,18 @@
 <app-header class="header"></app-header>
 <section id="landing-page">
-    <div class="tittle" [class.hidden]="scrollProgress() > 0.1">
-        <h1>SAVE THE DATE 28/06/25</h1>
+    <div class="landing-tittle" >
         <h1>IRENE & JORGE</h1>
+        <h2>{{"NOS CASAMOS"| translate}} 28/06/25</h2>
     </div>
-
-    <div id="love-container" [ngStyle]="{ width: circleSize +'px', height: circleSize + 'px'}">
-        <img src="assets/img/dubai.jpeg" class="love-img">
+    <div class="countdown">
+        <app-countdown ></app-countdown >
+            <button [routerLink]="[]" fragment="rsvp-page">SAVE THE DATE</button>
     </div>
-    <app-countdown class="countdown" [class.hidden]="scrollProgress() > 0.1"></app-countdown >
+  
 </section>
 
 <section id="our-love-story">
-    <h1>{{ "NUESTRA HISTORIA DE AMOR" | translate}}</h1>
+    <h1>{{ "NUESTRA HISTORIA" | translate}}</h1>
     <p>{{ "LA HISTORIA"| translate}}</p>
     <app-caurrosel></app-caurrosel>
 </section>
