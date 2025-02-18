@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RsvpEmailService } from '../../services/rsvp-email.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-rsvp-form',
@@ -11,7 +12,8 @@ import { RsvpEmailService } from '../../services/rsvp-email.service';
 })
 export class RsvpFormComponent implements OnInit{
 private fb = inject(FormBuilder);
-private emailService = inject(RsvpEmailService)
+private emailService = inject(RsvpEmailService);
+private router = inject(Router)
   
   
 rsvpForm!:FormGroup;
@@ -49,6 +51,8 @@ sendRsvp(event: Event):void{
       (response) =>{
         console.log('Confirmación enviada con éxito', response);
         alert('Confirmación enviada con éxito.');
+
+        this.router.navigate([],{fragment: 'presents'})
       },
       (error) =>{
 console.log('Error al enviar la confirmación por correo', error);
