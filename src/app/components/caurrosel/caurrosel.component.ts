@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, Signal, signal, WritableSignal } from '@angular/core';
 
 @Component({
   selector: 'app-caurrosel',
@@ -7,7 +7,7 @@ import { Component, signal } from '@angular/core';
   styleUrl: './caurrosel.component.scss'
 })
 export class CaurroselComponent {
-images = signal([
+images: Signal<string[]> = signal([
   'assets/img/castillo.jpeg',
   'assets/img/jungla.jpeg',
   'assets/img/mar.jpeg',
@@ -16,22 +16,23 @@ images = signal([
   'assets/img/playa.jpeg',
   'assets/img/piramides.jpeg',
   'assets/img/portugal.jpeg',
-  'assets/img/gigi',
-  'assets/img/gigi2',
+  'assets/img/gigi.jpeg',
+  'assets/img/gigi2.jpeg',
 ])
 
-currentIndex = signal(0)
+currentIndex: WritableSignal<number> = signal(0)
 
 constructor(){
   setInterval(()=> {
   this.nextImage();
    }, 3000);
   }
-  nextImage(){
-    this.currentIndex.set((this.currentIndex()+1 % this.images().length))
-  } 
-  prevImage(){
-    this.currentIndex.set((this.currentIndex() -1 + this.images().length % this.images().length))
+  nextImage() {
+    this.currentIndex.update((index) => (index + 1) % this.images().length);
+  }
+
+  // Función para retroceder a la imagen anterior
+  prevImage() {
+    this.currentIndex.update((index) => (index - 1 + this.images().length) % this.images().length);
   }
 }
-

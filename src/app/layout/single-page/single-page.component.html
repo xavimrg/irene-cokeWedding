@@ -1,31 +1,39 @@
 <app-header class="header"></app-header>
 <section id="landing-page">
-    <div class="landing-tittle" >
+    <div class="landing-tittle">
         <h1>IRENE & JORGE</h1>
         <h2>{{"NOS CASAMOS"| translate}} 28/06/25</h2>
     </div>
     <div class="countdown">
-        <app-countdown ></app-countdown >
-            <button [routerLink]="[]" fragment="rsvp-page">SAVE THE DATE</button>
+        <app-countdown></app-countdown>
+        <button [routerLink]="[]" fragment="rsvp-page">SAVE THE DATE</button>
     </div>
 </section>
 
-@if(contentLoaded()){<section id="our-love-story">
-    <h1>{{ "NUESTRA HISTORIA" | translate}}</h1>
-    <p>{{ "LA HISTORIA"| translate}}</p>
-    <app-caurrosel></app-caurrosel>
+@if(contentLoaded()){
+<section id="our-love-story">
+    <div id="carrousel-container"> 
+        <app-caurrosel></app-caurrosel>
+    </div>
+    <div id="ourLove-container">
+        <h1>{{ "NUESTRA HISTORIA" | translate}}</h1>
+        <p>{{ "LA HISTORIA"| translate}}</p>
+    </div>
+ 
+   
+   
 </section>
 <section id="when-where">
     <h1></h1>
     <div class="content">
         <app-google-maps></app-google-maps>
-            <div class="details">
-        <h2></h2>
-        <p></p>
-    </div>
+        <div class="details">
+            <h2></h2>
+            <p></p>
+        </div>
     </div>
 
-   
+
 </section>
 <section id="rsvp-page">
     <h1>{{ "CONFIRMA TU ASISTENCIA" | translate}}</h1>
@@ -34,5 +42,3 @@
 <section id="presents">
 
 </section>}
-
-
