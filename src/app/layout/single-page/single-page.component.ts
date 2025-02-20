@@ -16,8 +16,14 @@ import { RouterLink } from '@angular/router';
   styleUrl: './single-page.component.scss'
 })
 export class SinglePageComponent {
+contentLoaded: WritableSignal<boolean> = signal(false)
 
 
+constructor(){
+  setTimeout(() => {
+    this.contentLoaded.set(true);
+  },2000)
+}
 }
 
 

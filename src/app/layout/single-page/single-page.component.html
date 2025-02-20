@@ -8,10 +8,9 @@
         <app-countdown ></app-countdown >
             <button [routerLink]="[]" fragment="rsvp-page">SAVE THE DATE</button>
     </div>
-  
 </section>
 
-<section id="our-love-story">
+@if(contentLoaded()){<section id="our-love-story">
     <h1>{{ "NUESTRA HISTORIA" | translate}}</h1>
     <p>{{ "LA HISTORIA"| translate}}</p>
     <app-caurrosel></app-caurrosel>
@@ -34,6 +33,6 @@
 </section>
 <section id="presents">
 
-</section>
+</section>}
 
 

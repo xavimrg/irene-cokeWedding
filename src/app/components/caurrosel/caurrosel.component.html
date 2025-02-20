@@ -1,1 +1,11 @@
 <p>caurrosel works!</p>
+<div class="slider">
+<button (click)="prevImage()">prev</button>
+@if(images().length>0){
+    <div class="images-display">
+        <img [src]="images()[currentIndex()]" alt="slider images">
+    </div>
+
+}
+<button (click)="nextImage()">next</button>
+</div>
