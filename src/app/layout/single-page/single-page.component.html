@@ -16,7 +16,7 @@
         <app-caurrosel></app-caurrosel>
     </div>
     <div id="ourLove-container">
-        <h1>{{ "NUESTRA HISTORIA" | translate}}</h1>
+        <h2>{{ "NUESTRA HISTORIA" | translate}}</h2>
         <p>{{ "LA HISTORIA"| translate}}</p>
     </div>
  
@@ -25,7 +25,7 @@
 </section>
 <section id="when-where">
     <div id="whenInfo-container">
-        <h1>{{ "LUGAR" | translate }}</h1>
+        <h2 id="lugar-h2">{{ "LUGAR" | translate }}</h2>
         <p>{{ "NOS CASAMOS..." | translate }}</p>
         <h2>{{ "EN COCHE" | translate }}</h2>
         <p>{{ "PARQUING" | translate }}</p>
@@ -33,16 +33,19 @@
         <p>{{ "SERVICIO BUS" | translate }}</p>
         <h2>{{ "ALOJAMIENTO" | translate }}</h2>
         <p>{{ "RECOMENDACION" | translate }}</p>
+        <p id="catalonia">•⁠ ⁠HOTEL CATALONIA GRAN HOTEL VERDI**
+            verdi.recepcion&#64;cataloniahotels.com --
+            Av. Francesc Macià, 62 08208 Sabadell (Barcelona)</p>
     </div>
    
-    <div class="map-container">
-        <app-google-maps></app-google-maps>
+    <div id="map-container">
+        <app-google-maps id="maps"></app-google-maps>
     </div>
 
 
 </section>
 <section id="rsvp-page">
-    <h1>{{ "CONFIRMA TU ASISTENCIA" | translate}}</h1>
+    <h2>{{ "CONFIRMA TU ASISTENCIA" | translate}}</h2>
     <app-rsvp-form></app-rsvp-form>
 </section>
 <section id="presents">
