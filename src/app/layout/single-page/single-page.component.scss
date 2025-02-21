@@ -20,11 +20,29 @@
     z-index: 1000;
     background: transparent;
     display: flex;
-    overflow: hidden;
+
  
 font-family: 'WorkSans-Regular';  
 }
 
+@media (max-width: 768px) {
+  .header {
+    height: 30vh;
+    flex-direction: column; /* Cambia a una disposición en columna */
+    align-items: center;
+    height: auto; /* Ajusta la altura automáticamente */
+    padding: 10px 0;
+  }
+
+  #site-content-buttons {
+    order: 1; /* Aparece primero */
+    margin-bottom: 5px;
+  }
+
+  #language-buttons {
+    order: 2; /* Aparece debajo */
+  }
+}
 
 html, body {
   overflow-x: hidden; 
@@ -140,6 +158,12 @@ section{
     
   }
 
+  @media (max-width: 768px) {
+    #landing-page {
+      background-size: cover; /* Se asegura de cubrir la pantalla */
+      background-position: center;
+    }
+  }
   #our-love-story {
     font-family: 'WorkSans-Regular';
     background-color: #fef7e0;
