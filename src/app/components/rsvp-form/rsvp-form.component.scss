@@ -39,3 +39,11 @@ p{
     text-align: justify;
     text-justify: inter-word;
 }
+
+@media (max-width: 768px) {
+    #rsvpForm {
+      width: 85vw; 
+      padding: 5vw;
+    }
+  }
+  
