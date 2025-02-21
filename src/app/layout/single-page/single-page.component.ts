@@ -22,7 +22,7 @@ contentLoaded: WritableSignal<boolean> = signal(false)
 constructor(){
   setTimeout(() => {
     this.contentLoaded.set(true);
-  },2000)
+  },1500)
 }
 }
 

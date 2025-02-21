@@ -6,7 +6,7 @@
 "CONFIRMA TU ASISTENCIA":"Confirma tu asistencia ",
 "NOMBRE Y APELLIDO":"Nombre y Apellido", 
 "PAREJA":"Pareja", 
-"¿SOYS MÁS DE DOS EN VUESTRA INVITACIÓN? ¡CONFIRMA AL RESTO DE LA FAMILIA O GRUPO!":"¿Soys más de dos en vuestra invitación? Cónfirma al resto de la familia o grupo!",
+"¿SOYS MÁS DE DOS EN VUESTRA INVITACIÓN? ¡CONFIRMA AL RESTO DE LA FAMILIA O GRUPO!":"¿Sois más de dos en vuestra invitación? Cónfirma al resto de la familia o grupo!",
 "¿DE QUIEN VIENES TU?":"¿De quién vienes tú?",
 "AÑADIR MÁS INVITADOS":"Añadir más invitados",
 "INVITADO":"Invitado",
@@ -18,7 +18,7 @@
 "NO":"No",
 "AUN NO SE":"Aún no lo sé",
 "¿NECESITAS TRANSPORTE PARA LLEGAR?":"¿Necesitas transporte para llegar?",
-"REQUISITOS ALIMENTICIOS":"Requisitos alimenticios",
+"REQUISITOS ALIMENTIRIOS":"Requisitos alimentirios",
 "NINGUNO":"Ninguno",
 "VEGETEARINO":"Vegeteriano",
 "VEGANO":"Vegano",
@@ -44,5 +44,19 @@
 
 
 
-"LA HISTORIA":"Nuestra historia inicia en el barrio de Poble Sec de Barcelona, donde teníamos citas clandestinas a las 4:00 de la mañana en la parada del autobús. Irene vestida de uniforme camino al aeropuerto y Jorge con unas cuantas copas de más, camino a casa. Pronto Jorge empezó su intento de runner y salir correr todos los días. El circuito siempre empezaba y terminaba en la calle Font Honrada, curiosamente, la calle donde vivía Irene. La pasión por los viajes, la reina del Flow y el hecho de que Jorge aceptara ver las ocho películas de Harry Potter término por unirnos. Después de una pandemia, muchos viajes (y los que quedan), tres mudanzas, dos gatos y un bebé, hemos decidido dar el siguiente paso, ¡y nos encantaría vivirlo contigo! Te esperamos el 28 de Junio de 2025 a las 18:00 en el Más de Can Riera (Sentmenat)"
+"LA HISTORIA":"Nuestra historia inicia en el barrio de Poble Sec de Barcelona, donde teníamos citas clandestinas a las 4:00 de la mañana en la parada del autobús. Irene vestida de uniforme camino al aeropuerto y Jorge con unas cuantas copas de más, camino a casa. Pronto Jorge empezó su intento de runner y salir correr todos los días. El circuito siempre empezaba y terminaba en la calle Font Honrada, curiosamente, la calle donde vivía Irene. La pasión por los viajes, la reina del Flow y el hecho de que Jorge aceptara ver las ocho películas de Harry Potter término por unirnos. Después de una pandemia, muchos viajes (y los que quedan), tres mudanzas, dos gatos y un bebé, hemos decidido dar el siguiente paso, ¡y nos encantaría vivirlo contigo! Te esperamos el 28 de Junio de 2025 a las 18:00 en el Más de Can Riera (Sentmenat).", 
+"LUGAR":"Lugar:",
+"NOS CASAMOS...":"Nos casamos en el Mas de Can Riera, muy cerca de Sabadell y a solo 40 minutos de Barcelona.",
+"¿COMO LLEGAR ALLI?":"¿Cómo llegar allí?",
+"EN COCHE":"En coche",
+"PARQUING":"La Masía dispone de un parking gratuito privado para acceder con vehículo propio.",
+"EN AUTOBUS":"En autobús",
+"SERVICIO BUS":"Habrá servicio de autobús de ida y vuelta desde Barcelona. En caso de necesitar transporte hasta el lugar, por favor, hacédnoslo saber respondiendo al formulario que encontraréis más adelante antes del 15 de mayo. El autobús sólo hará un viaje de vuelta y será al terminar la fiesta. En los días previos a la boda os comunicaremos hora y punto de salida.",
+"ALOJAMIENTO:":"Alojamiento",
+"RECOMENDACION":"Os dejamos la siguiente recomendación, (al hacer reserva podéis indicar que venís a nuestra boda en el Mas de Can Riera para contar con un precio especial).",
+"REGALO": "Regalo",
+"FERRARI":"En el piso ya tenemos vajilla y el ajuar, pero nos falta el Ferrari en el parking. Si queréis colaborar: ES65 1583 0001 1591 3970 0670"
+
+
+
 }

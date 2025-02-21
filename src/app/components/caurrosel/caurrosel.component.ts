@@ -31,7 +31,6 @@ constructor(){
     this.currentIndex.update((index) => (index + 1) % this.images().length);
   }
 
-  // Función para retroceder a la imagen anterior
   prevImage() {
     this.currentIndex.update((index) => (index - 1 + this.images().length) % this.images().length);
   }

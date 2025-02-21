@@ -6,7 +6,7 @@
     </div>
     <div class="countdown">
         <app-countdown></app-countdown>
-        <button [routerLink]="[]" fragment="rsvp-page">SAVE THE DATE</button>
+        <button  id="save" [routerLink]="[]" fragment="rsvp-page">SAVE THE DATE</button>
     </div>
 </section>
 
@@ -24,13 +24,19 @@
    
 </section>
 <section id="when-where">
-    <h1></h1>
-    <div class="content">
+    <div id="whenInfo-container">
+        <h1>{{ "LUGAR" | translate }}</h1>
+        <p>{{ "NOS CASAMOS..." | translate }}</p>
+        <h2>{{ "EN COCHE" | translate }}</h2>
+        <p>{{ "PARQUING" | translate }}</p>
+        <h2>{{ "EN AUTOBUS" | translate }}</h2>
+        <p>{{ "SERVICIO BUS" | translate }}</p>
+        <h2>{{ "ALOJAMIENTO" | translate }}</h2>
+        <p>{{ "RECOMENDACION" | translate }}</p>
+    </div>
+   
+    <div class="map-container">
         <app-google-maps></app-google-maps>
-        <div class="details">
-            <h2></h2>
-            <p></p>
-        </div>
     </div>
 
 
@@ -40,5 +46,6 @@
     <app-rsvp-form></app-rsvp-form>
 </section>
 <section id="presents">
-
+<h2>{{ "REGALO" | translate}}</h2>
+<p>{{ "FERRARI" | translate}}</p>
 </section>}

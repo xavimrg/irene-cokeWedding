@@ -7,10 +7,10 @@
         </div>
     
         <div class="formInput">
-            <label>*{{"PAREJA"| translate}}</label>
+            <label>{{"PAREJA"| translate}} *</label>
             <input type="text" formControlName="nombrePareja">
         </div>
-        <p>*{{"NOS ENCANTARÍA QUE TODOS NUESTROS SERES QUERIDOS ESTUVIERAN CON NOSOTROS EN ESTE DÍA TAN ESPECIAL, Y PARA ELLO, NUESTRAS INVITACIONES HAN SIDO CUIDADOSAMENTE PERSONALIZADAS CON EL NOMBRE DE CADA INVITADO. SI TIENES ALGUNA DUDA O PREGUNTA SOBRE TU INVITACIÓN, NO DUDES EN CONTACTARNOS."| translate }}
+        <p>* {{"NOS ENCANTARÍA QUE TODOS NUESTROS SERES QUERIDOS ESTUVIERAN CON NOSOTROS EN ESTE DÍA TAN ESPECIAL, Y PARA ELLO, NUESTRAS INVITACIONES HAN SIDO CUIDADOSAMENTE PERSONALIZADAS CON EL NOMBRE DE CADA INVITADO. SI TIENES ALGUNA DUDA O PREGUNTA SOBRE TU INVITACIÓN, NO DUDES EN CONTACTARNOS."| translate }}
     <p>{{"¿SOYS MÁS DE DOS EN VUESTRA INVITACIÓN? ¡CONFIRMA AL RESTO DE LA FAMILIA O GRUPO!"| translate}}</p>
     <button type="button" (click)="showMoreInputs()">{{"AÑADIR MÁS INVITADOS" | translate}}</button>
     @if(showInputs){
@@ -52,7 +52,7 @@
            
         </div>
         <div class="select">
-            <label>{{"REQUISITOS ALIMENTICIOS"| translate}}</label>
+            <label>{{"REQUISITOS ALIMENTIRIOS"| translate}}</label>
             <select formControlName="alimentacion">
                 <option value="ninguno">{{"NINGUNO" | translate}}</option>
                 <option value="vegetariano">{{"VEGETARIANO"| translate}}</option>
@@ -84,10 +84,10 @@
             <label>{{"¿QUIERES MANDARNOS ALGUNA CANCION PARA LA FIESTA?"| translate}}</label>
             <input type="text" formControlName="cancion">
         </div>
-        <div class="formInput">
+           <!-- <div class="formInput">
             <label>{{"¿ALGO QUE COMENTARNOS?"| translate}}</label>
             <input type="text" formControlName="comentario">
-        </div>
+        </div> -->
     <div class="formInput">
     <label>{{"¿QUIERES RECIBIR COPIA DE LA CONFIRMACIÓN POR EMAIL?" | translate}}</label>
     <input type="text" formControlName="mail" id="">
