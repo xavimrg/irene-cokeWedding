@@ -36,11 +36,23 @@ font-family: 'WorkSans-Regular';
 
   #site-content-buttons {
     order: 1; /* Aparece primero */
-    margin-bottom: 5px;
+    margin-bottom: 1px;
   }
 
   #language-buttons {
     order: 2; /* Aparece debajo */
+  }
+
+  button {
+    font-size: 0.8rem; /* Reduce el tamaño de la fuente */
+    padding: 8px 12px; /* Reduce el espacio interno */
+    margin: 3px; /* Separa los botones */
+    flex-wrap: wrap; 
+  }
+
+  #site-content-buttons button,
+  #language-buttons button {
+    flex-wrap: wrap; /* Permite que los botones se distribuyan si no caben */
   }
 }
 
@@ -161,7 +173,7 @@ section{
   @media (max-width: 768px) {
     #landing-page {
       background-size: cover; /* Se asegura de cubrir la pantalla */
-      background-position: center;
+      background-position: 70% center;
     }
   }
   #our-love-story {

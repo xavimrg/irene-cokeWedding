@@ -46,3 +46,9 @@
     }
   }
   
+  @media (max-width: 768px){
+.next, .prev {
+  visibility: hidden;
+}
+
+  }
