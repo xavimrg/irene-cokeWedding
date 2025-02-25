@@ -1,58 +1,80 @@
-/* HEADER */
-.header {
+/* Reset de márgenes y padding para evitar espacios extra */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .header {
     width: 100vw;
     height: 5vh;
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
-    overflow: hidden; /* Evita desplazamiento lateral */
-}
-
-.header.sticky {
-    background: rgba(57, 52, 52, 0.9); /* Fondo semi-transparente */
-}
-
-/* BOTONES */
-button {
-    border: 1px solid black;
-    background: transparent;
-    padding: 6px 12px;
-    margin-top: 1vh;
-    cursor: pointer;
+    padding: 0 20px;
+    font-family: 'WorkSans-Regular', sans-serif;
+  }
+  
+  /* Contenedor de idiomas (izquierda en desktop) */
+  #language-container {
+    display: flex;
+    gap: 5px; /* Espacio entre botones */
+  }
+  
+  /* Contenedor de navegación (derecha en desktop) */
+  #site-container {
+    display: flex;
+    gap: 5px; /* Espacio entre botones */
+  }
+  
+  /* Estilos generales para los botones */
+  button {
     font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-button:hover {
+    padding: 8px 12px;
+    border: 2px solid black;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
     background: black;
     color: white;
-}
-
-/* CONTENEDOR DE IDIOMAS */
-#language-container {
-    display: flex;
-    gap: 5px;
-    position: absolute;
-    left: 2rem;
-}
-
-/* CONTENEDOR DE NAVEGACIÓN */
-#site-container {
-    display: flex;
-    gap: 10px;
-    position: absolute;
-    right: 2rem;
-}
-
-/* EVITAR OVERFLOW EN TODO EL DOCUMENTO */
-html, body {
-    overflow-x: hidden; /* Evita el desplazamiento horizontal */
-    width: 100vw;
-}
-
-
+  }
+  
+  /* 🛠 Responsive: Mobile */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      height: auto;
+      padding: 10px 0;
+      align-items: center;
+    }
+  
+    /* Idiomas arriba, luego site-content */
+    #language-container {
+      order: 1;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+    }
+  
+    #site-container {
+      order: 2;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+  
+    button {
+      font-size: 0.9rem;
+      padding: 6px 10px;
+      border: 2px solid black;
+    }
+  }
+  

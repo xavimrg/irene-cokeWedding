@@ -31,22 +31,26 @@ font-family: 'WorkSans-Regular';
     flex-direction: column; /* Cambia a una disposición en columna */
     align-items: center;
     height: auto; /* Ajusta la altura automáticamente */
-    padding: 10px 0;
+
   }
+  
 
   #site-content-buttons {
     order: 1; /* Aparece primero */
-    margin-bottom: 1px;
+    margin-bottom: 10px;
+    width: 100vw;
   }
 
   #language-buttons {
+    margin-top: 5px;
+    width: 100vw;
     order: 2; /* Aparece debajo */
   }
 
   button {
     font-size: 0.8rem; /* Reduce el tamaño de la fuente */
     padding: 8px 12px; /* Reduce el espacio interno */
-    margin: 3px; /* Separa los botones */
+    margin: 1px; /* Separa los botones */
     flex-wrap: wrap; 
   }
 
@@ -160,15 +164,33 @@ section{
       }
     }
   }
-  
-  #saveTheDate-btn{
-    background-color: white;
-    font-family: 'WorkSants-Bold';
-    border-radius: 50%;
-    height: 3rem;
-    width: 10rem;
-    
-  }
+  #save {
+    background-color: white; /* Fondo blanco */
+    color: #F14E95; /* Letras rosas */
+    border: none; /* Sin borde */
+    border-radius: 50px; /* Bordes redondeados en los extremos */
+    padding: 15px 40px; /* Espaciado dentro del botón */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición para el hover */
+    display: inline-block;
+    text-align: center;
+}
+
+#save:hover {
+    background-color: #F14E95; /* Fondo rosa en hover */
+    color: white; /* Letras blancas en hover */
+}
+
+@media (max-width: 768px) {
+    #save {
+        padding: 12px 30px; /* Reducir el tamaño del botón en mobile */
+        font-size: 1rem; /* Reducir el tamaño de la fuente */
+    }
+}
+
 
   @media (max-width: 768px) {
     #landing-page {
@@ -356,316 +378,3 @@ section{
     font-family: 'WorkSans-Regular';  
 }
 
-// @font-face {
-//   font-family: 'Sacramento-Regular';
-//   src: url('/assets/fonts/Sacramento-Regular.tff') format('truetype');
-// }
-
-// @font-face {
-//   font-family: 'WorkSans-Bold';
-//   src: url('/assets/fonts/WorkSans-Bold.otf') format('opentype');
-// }
-
-// @font-face {
-//   font-family: 'WorkSans-Regular';
-//   src: url('/assets/fonts/WorkSans-Regular.otf') format('opentype');
-// }
-// .header{
-//     width: 100vw;
-//     height: 5vh;
-//     position: sticky;
-//     top: 0;
-//     z-index: 1000;
-//     background: transparent;
-//     display: flex;
-//     overflow: hidden;
- 
-// font-family: 'WorkSans-Regular';  
-// }
-
-
-// html, body {
-//   overflow-x: hidden; 
-//   width: 100vw;
-//  }
-
-//  h1{
-//   font-family: 'Sacramento-Regular' !important;  
-//  }
-
-// .header.sticky {
-//   background: rgba(57, 52, 52, 0.9); /* Fondo semi-transparente */
-//   width: 100vw;
-// }
-
-
-// section{
-
-//     width: 100vw;
-//     max-width: 100%;
-//     height: calc(100vh - 5vh);  /* Resto del espacio tras el header */
-//     overflow-x: hidden; /* Para evitar que el contenido se desborde */
-// }
-
-
-
-
-// #landing-page {
-//     background: url('/assets/img/dubai2.jpeg') no-repeat center center / cover;
-//     background-attachment: fixed;
-//     background-size: 100vw;
-//     margin-top: -5vh;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     height: 100vh;
-//     width: 100vw;
-//     max-width: 100%;
-//     text-align: center;
-//     position: relative;
-//     overflow: hidden;
-
-
-    
-
-  
-//     .landing-tittle {
-//       position: absolute;
-//       top: 10%;
-//       z-index: 2;
-//       font-size: 2rem;
-//       color: #fff;
-//       text-transform: uppercase;
-//       transition: opacity 0.5s ease-in-out;
-//       font-family: 'Sacramento-Regular';
-//       &.hidden {
-//         opacity: 0;
-//       }
-  
-//       h1 {
-//         margin: 5px 0;
-//         font-weight: bold;
-//         font-family: 'Sacramento-Regular', !important;
-        
-    
-//       }
-//     }
-  
-//     #ourLove-container {
-//       display: flex;
-//       align-items: center;
-//       justify-content: center;
-//       border-radius: 50%;
-//       overflow: hidden;
-//       position: relative;
-//       transition: width 0.5s ease, height 0.5s ease;
-  
-//       .love-img {
-//         width: 100%;
-//         height: 100%;
-//         object-fit: cover;
-//         border-radius: 50%;
-//       }
-//     }
-//     .landing-tittle h2 {
-//       color: white; /* Texto blanco */
-//       text-shadow: 1px 1px 2px black, -1px -1px 2px black, 1px -1px 2px black, -2px 2px 4px black;
-//       font-family: 'Sacramento-Regular';
-//     }
-  
-//     .countdown {
-//       position: absolute;
-//       bottom: 10%;
-//       z-index: 2;
-//       font-size: 1.1rem;
-//       color: #fff;
-//       transition: opacity 0.5s ease-in-out;
-//       font-family: 'WorkSans-Regular';  
-  
-//       &.hidden {
-//         opacity: 0;
-//       }
-//     }
-//   }
-  
-//   #saveTheDate-btn{
-//     background-color: white;
-//     font-family: 'WorkSants-Bold';
-//     border-radius: 50%;
-//     height: 3rem;
-//     width: 10rem;
-    
-//   }
-
-//   #our-love-story {
-//     font-family: 'WorkSans-Regular';
-//     background-color: #fef7e0;
-//     display: flex;
-//     flex-direction: row;
-//     align-items: center;
-//     justify-content: center;
-//     height: 100vh;
-//     width: 100vw;
-//     gap: 20px;
-//     padding: 20px;
-//     overflow: hidden; /* Evita que el contenido haga la página más ancha */
-  
-//     #carrousel-container {
-//         flex: 1;
-//         max-width: 50%;
-//         height: 80%;
-//         max-width: 90%; /* Limita el ancho del texto dentro del contenedor */
-        
-//         app-carrousel {
-//             width: 100%;
-//             height: 100%;
-//         }
-
-//         img {
-//             width: 100%;
-//             height: 100%;
-//             object-fit: cover; // Ajusta las imágenes sin deformarlas
-//             border-radius: 10px;
-//         }
-//     }
-
-//     #ourLove-container {
-//         flex: 1;
-//         max-width: 50%;
-//         padding: 20px;
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         justify-content: center;
-//         text-align: justify;
-//         word-wrap: break-word;
-//         overflow-wrap: break-word;
-//         white-space: normal;
-//         box-sizing: border-box;
-    
-        
-
-//         h1 {
-//             font-size: 2rem;
-//             margin-bottom: 10px;
-//             font-family: 'Sacramento';  
-//         }
-
-//         p {
-//             font-size: 1.2rem;
-//             line-height: 1.5;
-//             max-width: 90%; /* Limita el ancho del texto dentro del contenedor */
-//         }
-//     }
-// }
-
-
-// @media (max-width: 768px) {
-//     #our-love-story {
-//         flex-direction: column;
-//         height: auto;
-//         padding: 40px 20px;
-
-//         #carrousel-container, #ourLove-container {
-//             max-width: 100%;
-//             height: auto;
-//         }
-
-//         #carrousel-container {
-//             order: 2; // Se coloca debajo del texto
-//         }
-
-//         #ourLove-container {
-//             order: 1; // Se coloca arriba
-//             text-align: center;
-//         }
-//     }
-// }
-
-
-// #when-where{
-//   background: url('/assets/img/2023-05-24.jpg') no-repeat center center / cover;
-//   display: flex;
-//   width: 100vw;
-//   height: 100vh;
-//   font-family: "WorkSans-Regular";
-
-
-// }
-// #whenInfo-container{
-//   width: 50%;
-// }
-
-// #lugar-h2{
-//   margin-top: 50px;
-// }
-
-// #whenInfo-container p {
-//   background-color: rgba(254, 247, 224, 0.5); /* Fondo translúcido */
-//   padding: 5px; /* Espaciado interno */
-//   border-radius: 15px; /* Bordes redondeados */
-//   margin: 5px 0; /* Separación entre párrafos */
-
-// }
-// #whenInfo-container h2 {
-
-//     background-color: rgba(254, 247, 224, 0.5); /* Fondo translúcido */
-//     padding: 5px 10px; /* Solo ocupa el tamaño del texto */
-//     border-radius: 15px;
-//     display: inline-block; /* Evita que ocupe todo el ancho */
-//   }
-  
-// #map-container{
-//   width: 50%;
-//   display: flex;
-//   align-items: center;
-
-// }
-
-// #map-container app-google-maps {
-//   width: 80%;
-//   display: flex;
-//   border-radius: 15%;
-//   height: auto; /* Mantiene proporciones */
-//   margin: auto; /* Ayuda a centrar si es necesario */
-// }
-
-// /* Responsive - Mobile: Apilar en columna */
-// @media (max-width: 768px) {
-//   #when-where {
-//       flex-direction: column;
-//       align-items: center;
-//       height: auto;
-  
-
-//   }
-
-//   #whenInfo-container {
-//       max-width: 100%;
-//       text-align: center;
-//       align-items: center;
-
-//   }
-
-//   #map-container {
-//       max-width: 100%;
-//       height: 300px;
-//   }
-// }
-
-
-// #rsvp-page{
-//     background-color: #fef7e0;
-//     height: 100vh;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     font-family: 'WorkSans-Regular';  
-// }
-
-// #presents{
-//     background-color: #fef7e0;
-//     font-family: 'WorkSans-Regular';  
-// }
