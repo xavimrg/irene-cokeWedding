@@ -39,6 +39,7 @@
     background-color: transparent;
     cursor: pointer;
     transition: background 0.3s ease;
+    font-weight: bold; 
   }
   
   button:hover {
@@ -47,26 +48,26 @@
   }
   
   /* 🛠 Responsive: Mobile */
-  @media (max-width: 768px) {
+  @media (max-width: 1300px) {
     .header {
       flex-direction: column;
       height: auto;
-      padding: 10px 0;
+
       align-items: center;
     }
   
     /* Idiomas arriba, luego site-content */
-    #language-container {
-      order: 1;
-      flex-direction: row;
+    .language-container {
+      order: 2;
+ 
       justify-content: center;
       width: 100%;
     }
   
-    #site-container {
-      order: 2;
-      flex-direction: row;
-      flex-wrap: wrap;
+    .site-container {
+      order: 1;
+ 
+  
       justify-content: center;
       width: 100%;
     }

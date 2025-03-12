@@ -25,39 +25,14 @@
 font-family: 'WorkSans-Regular';  
 }
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
   .header {
-    height: 30vh;
     flex-direction: column; /* Cambia a una disposición en columna */
     align-items: center;
     height: auto; /* Ajusta la altura automáticamente */
 
   }
-  
 
-  #site-content-buttons {
-    order: 1; /* Aparece primero */
-    margin-bottom: 10px;
-    width: 100vw;
-  }
-
-  #language-buttons {
-    margin-top: 5px;
-    width: 100vw;
-    order: 2; /* Aparece debajo */
-  }
-
-  button {
-    font-size: 0.8rem; /* Reduce el tamaño de la fuente */
-    padding: 8px 12px; /* Reduce el espacio interno */
-    margin: 1px; /* Separa los botones */
-    flex-wrap: wrap; 
-  }
-
-  #site-content-buttons button,
-  #language-buttons button {
-    flex-wrap: wrap; /* Permite que los botones se distribuyan si no caben */
-  }
 }
 
 html, body {
@@ -83,11 +58,20 @@ section{
     overflow-x: hidden; /* Para evitar que el contenido se desborde */
 }
 
+#landing-page,
+#our-love-story,
+#when-where {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #fff; /* Asegura que haya un color de fondo por si no se carga la imagen */
+}
 
 
 
 #landing-page {
-    background: url('/assets/img/dubai2.jpeg') no-repeat center center / cover;
+    background: url('/assets/img/portada copia.jpeg') no-repeat center center / cover;
     background-attachment: fixed;
     background-size: 100vw;
     margin-top: -5vh;
@@ -210,6 +194,9 @@ section{
     gap: 20px;
     padding: 20px;
     overflow: hidden; /* Evita que el contenido haga la página más ancha */
+    h2 {
+      font-weight: bold; 
+    }
   
     #carrousel-container {
         flex: 1;
@@ -228,6 +215,8 @@ section{
             object-fit: cover; // Ajusta las imágenes sin deformarlas
             border-radius: 10px;
         }
+
+       
     }
 
     #ourLove-container {

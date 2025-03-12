@@ -16,7 +16,6 @@ images: Signal<string[]> = signal([
   'assets/img/playa.jpeg',
   'assets/img/piramides.jpeg',
   'assets/img/portugal.jpeg',
-  'assets/img/gigi.jpeg',
   'assets/img/gigi2.jpeg',
 ])
 

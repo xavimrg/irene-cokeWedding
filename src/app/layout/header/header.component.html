@@ -1,7 +1,8 @@
 
-<div id="language-container"><button  (click)="changeLanguage('cat')">Català</button>
+<div class="language-container">
+    <button  (click)="changeLanguage('cat')">Català</button>
     <button (click)="changeLanguage('es')">Castellano</button></div>
-<div id="site-container">
+<div class="site-container">
 <button [routerLink]="[]" fragment="landing-page">{{"NOS CASAMOS"| translate}}</button>
 <button [routerLink]="[]" fragment="our-love-story">{{"NUESTRA HISTORIA" | translate}}</button>
 <button [routerLink]="[]" fragment="when-where">{{"¿DONDE?" | translate}}</button>
