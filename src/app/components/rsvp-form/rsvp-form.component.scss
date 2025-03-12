@@ -64,6 +64,7 @@ button {
     transition: background 0.3s ease;
     font-weight: bold;
     margin-top: 1rem; /* Espacio entre el formulario y el botón */
+    margin-bottom: 1rem;
 }
 
 button:hover {
@@ -94,6 +95,8 @@ button:hover {
 
     button {
         font-size: 0.9rem; /* Reducido el tamaño del botón */
+        padding: 6px, 8px;
+        margin-bottom: 0,5rem;
     }
 
         .rsvp-tittle {
