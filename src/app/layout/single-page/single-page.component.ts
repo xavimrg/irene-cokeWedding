@@ -1,4 +1,4 @@
-import { Component, signal, Signal, WritableSignal } from '@angular/core';
+import { Component, effect, signal, WritableSignal } from '@angular/core';
 import { CommonModule } from '@angular/common'
 import { HeaderComponent } from '../header/header.component';
 import { TranslateModule } from '@ngx-translate/core';
@@ -22,8 +22,13 @@ contentLoaded: WritableSignal<boolean> = signal(false)
 constructor(){
   setTimeout(() => {
     this.contentLoaded.set(true);
-  },1500)
+  },1500);
+
+  
+
 }
+
+
 }
 
 
