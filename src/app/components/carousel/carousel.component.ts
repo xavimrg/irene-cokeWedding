@@ -1,12 +1,12 @@
 import { Component, Signal, signal, WritableSignal } from '@angular/core';
 
 @Component({
-  selector: 'app-caurrosel',
+  selector: 'app-carousel',
   imports: [],
-  templateUrl: './caurrosel.component.html',
-  styleUrl: './caurrosel.component.scss'
+  templateUrl: './carousel.component.html',
+  styleUrl: './carousel.component.scss'
 })
-export class CaurroselComponent {
+export class CarouselComponent {
 images: Signal<string[]> = signal([
   'assets/img/castillo.jpeg',
   'assets/img/jungla.jpeg',
