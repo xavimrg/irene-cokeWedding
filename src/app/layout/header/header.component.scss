@@ -17,6 +17,7 @@
   align-items: center;
   padding: 0 20px;
   font-family: 'WorkSans-Regular', sans-serif;
+  transition: top 0.3s ease-in-out;
 }
 
 /* Contenedor de idiomas (izquierda en desktop) */
@@ -55,6 +56,7 @@ button:hover {
     flex-direction: column;
     height: auto;
     align-items: center;
+    font-size: 0.8rem; /* Reducción del tamaño de letra */
   }
 
   /* Idiomas arriba, luego site-content */
@@ -71,8 +73,23 @@ button:hover {
   }
 
   button {
-    font-size: 0.9rem;
+    font-size: 0.8rem; /* Reducción de tamaño de los botones */
     padding: 6px 10px;
     border: 2px solid black;
+  }
+
+  /* Cambiar la visibilidad del header en mobile */
+  .hidden-header {
+    display: none; /* Ocultar el header en secciones que no sean landing-page */
+  }
+}
+
+/* Estilos para cuando el header se oculta (para la sección que hace scroll) */
+@keyframes showHeader {
+  0% {
+    top: -5vh; /* Desaparece al inicio */
+  }
+  100% {
+    top: 0; /* Se muestra cuando hace scroll hacia arriba */
   }
 }

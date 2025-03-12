@@ -1,4 +1,5 @@
-<app-header class="header"></app-header>
+<app-header class="header" [ngClass]="{'hidden-header': !showHeader}"></app-header>
+
 <section id="landing-page">
     <div class="landing-tittle">
         <h1>IRENE & JORGE</h1>
@@ -6,11 +7,11 @@
     </div>
     <div class="countdown">
         <app-countdown></app-countdown>
-        <button  id="save" [routerLink]="[]" fragment="rsvp-page">SAVE THE DATE</button>
+        <button id="save" [routerLink]="[]" fragment="rsvp-page">SAVE THE DATE</button>
     </div>
 </section>
 
-@if(contentLoaded()){
+@if(contentLoaded()) {
 <section id="our-love-story">
     <div id="carrousel-container"> 
         <app-carousel></app-carousel>
@@ -19,44 +20,37 @@
         <h2>{{ "NUESTRA HISTORIA" | translate}}</h2>
         <p>{{ "LA HISTORIA"| translate}}</p>
     </div>
- 
 </section>
-   
-    <section id="when-where">
-        <div id="whenInfo-container">
-          <h2 id="lugar-h2">{{ "LUGAR" | translate }}</h2>
-          <p>{{ "NOS CASAMOS..." | translate }}</p>
-          <app-google-maps id="maps"></app-google-maps>
-        </div>
 
-            <div class="map-container" >
-                <h2>{{ "COMO LLEGAR" | translate }}</h2>
-                <div class="divider"> </div>
-                    <h2>{{ "EN COCHE" | translate }}</h2>
-                    <p>{{ "PARQUING" | translate }}</p>
-                    <h2>{{ "EN AUTOBUS" | translate }}</h2>
-                    <p>{{ "SERVICIO BUS" | translate }}</p>
-                    <h2>Taxi:</h2>
-                    <p>{{"TAXI"| translate}}</p>
-                    <h2>{{ "ALOJAMIENTO" | translate }}</h2>
-                    <p>{{ "RECOMENDACION" | translate }}</p>
-                    <p id="catalonia">•⁠ ⁠HOTEL CATALONIA GRAN HOTEL VERDI**
-                      verdi.recepcion&#64;cataloniahotels.com --
-                      Av. Francesc Macià, 62 08208 Sabadell (Barcelona)
-                    </p>
-               
-            </div>  
+<section id="when-where">
+    <div id="whenInfo-container">
+        <h2 id="lugar-h2">{{ "LUGAR" | translate }}</h2>
+        <p>{{ "NOS CASAMOS..." | translate }}</p>
+        <app-google-maps id="maps"></app-google-maps>
+    </div>
 
-      </section>
-      
-
-
+    <div class="map-container">
+        <h2>{{ "COMO LLEGAR" | translate }}</h2>
+        <div class="divider"></div>
+        <h2>{{ "EN COCHE" | translate }}</h2>
+        <p>{{ "PARQUING" | translate }}</p>
+        <h2>{{ "EN AUTOBUS" | translate }}</h2>
+        <p>{{ "SERVICIO BUS" | translate }}</p>
+        <h2>Taxi:</h2>
+        <p>{{"TAXI"| translate}}</p>
+        <h2>{{ "ALOJAMIENTO" | translate }}</h2>
+        <p>{{ "RECOMENDACION" | translate }}</p>
+        <p id="catalonia">•⁠ ⁠HOTEL CATALONIA GRAN HOTEL VERDI** 
+        verdi.recepcion&#64;cataloniahotels.com -- Av. Francesc Macià, 62 08208 Sabadell (Barcelona)</p>
+    </div>
+</section>
 
 <section id="rsvp-page">
-    
     <app-rsvp-form></app-rsvp-form>
 </section>
+
 <section id="presents">
-<h2>{{ "REGALO" | translate}}</h2>
-<p>{{ "FERRARI" | translate}}</p>
-</section>}
+    <h2>{{ "REGALO" | translate}}</h2>
+    <p>{{ "FERRARI" | translate}}</p>
+</section>
+}
