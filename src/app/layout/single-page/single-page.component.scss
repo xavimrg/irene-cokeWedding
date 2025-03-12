@@ -325,7 +325,7 @@ section{
 /* ---------- RIGHT COLUMN (MAP + TEXT) ---------- */
 .map-container {
   width: 50%;
-  padding: 2rem;
+  padding: 0,5rem;
   box-sizing: border-box;
 
   display: flex;
@@ -333,7 +333,7 @@ section{
 
   h2 {
     background-color: rgba(254, 247, 224, 0.8);
-    padding: 10px 20px;
+    padding: 8px 18px;
     border-radius: 15px;
     display: inline-block;
     margin-bottom: 0; // ❌ sin espacio debajo
@@ -344,7 +344,7 @@ section{
     padding: 10px 15px;
     border-radius: 15px;
     margin-top: 0; // ❌ sin espacio arriba
-    margin-bottom: 1rem;
+    margin-bottom: 0.2rem;
     line-height: 1.6;
   }
 

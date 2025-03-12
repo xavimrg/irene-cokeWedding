@@ -1,64 +1,103 @@
+/* Fuente para todo el formulario */
+#rsvpForm, 
+#rsvpForm label, 
+#rsvpForm input, 
+#rsvpForm textarea, 
+#rsvpForm select, 
+#rsvpForm p, 
+#rsvpForm button,
+#rsvpForm .rsvp-tittle { /* Asegura que el título también use WorkSans-Regular */
+    font-family: 'WorkSans-Regular', sans-serif;
+}
 
-
-#rsvpForm{
-  
-    background-color:   #fef4d1;
-    width: 45vw;
-    padding: 1vw;
+/* Estilos para el formulario en general */
+#rsvpForm {
+    background-color: #fef4d1;
+    width: 45vw; /* Ajusta el ancho a 45% del viewport en escritorio */
+    padding: 2vw;
     border: solid 0.5px #142f30;
     border-radius: 5%;
-    padding: 5%;
-    
-
+    margin: 2vw auto; /* Centramos el formulario */
+    font-size: 0.9rem; /* Reducimos el tamaño del texto */
 }
 
-.formInput{
+.rsvp-tittle {
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;  /* Centrado del texto */
+    margin: 0;  /* Eliminamos márgenes innecesarios */
+  }
+  
+  
 
+.formInput {
     margin-bottom: 1vh;
-
 }
 
-.formInput label{
+.formInput label {
     font-weight: bold;
+    font-size: 1rem; /* Reducido */
 }
 
-label {
-    font-weight: bold;
+input, textarea, select {
+    width: 100%; /* Hacemos que los campos ocupen todo el ancho disponible */
+    margin: 1vh 0;
+    background-color: #fef7e0;
+    border: solid 0.5px #142f30;
+    padding: 0.8rem; /* Reducido el padding */
+    font-size: 0.9rem; /* Reducido el tamaño de la fuente */
 }
 
-input, textarea, select{
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-margin: 1vh;
-background-color: #fef7e0;
-border: solid 0.5px #142f30;
-}
-
-p{
+/* Ajuste de párrafos */
+p {
     text-align: justify;
     text-justify: inter-word;
+    font-size: 0.9rem; /* Reducido el tamaño de la fuente */
 }
 
+/* Estilos del botón */
 button {
-    font-size: 1rem;
+    font-size: 1rem; /* Reducido el tamaño del texto */
     padding: 8px 12px;
     border: 2px solid black;
     background-color: transparent;
     cursor: pointer;
     transition: background 0.3s ease;
-    font-weight: bold; 
-  }
-  
-  button:hover {
+    font-weight: bold;
+    margin-top: 1rem; /* Espacio entre el formulario y el botón */
+}
+
+button:hover {
     background: black;
     color: white;
-  }
+}
 
+/* Ajustes en móviles */
 @media (max-width: 768px) {
     #rsvpForm {
-      width: 85vw; 
-      padding: 5vw;
+        width: 85vw; /* Ajusta el ancho a 85% en dispositivos pequeños */
+        padding: 5vw;
+        font-size: 0.8rem; /* Reducido el tamaño de texto en móviles */
     }
-  }
-  
+
+    .formInput label {
+        font-size: 0.9rem; /* Reducido para adaptarse mejor a pantallas pequeñas */
+    }
+
+    input, textarea, select {
+        width: 90%; /* Asegura que los campos se adapten al 100% en pantallas pequeñas */
+        font-size: 0.8rem; /* Reducción para pantallas móviles */
+    }
+
+    p {
+        font-size: 0.8rem; /* Reducción de texto en párrafos para móviles */
+    }
+
+    button {
+        font-size: 0.9rem; /* Reducido el tamaño del botón */
+    }
+
+        .rsvp-tittle {
+          font-size: 24px;  /* Ajustamos el tamaño de la fuente para móviles */
+        }
+      
+}
