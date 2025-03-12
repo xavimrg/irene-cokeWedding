@@ -1,3 +1,13 @@
+
+@font-face {
+    font-family: 'WorkSans-Bold';
+    src: url('/assets/fonts/WorkSans-Bold.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'WorkSans-Regular';
+    src: url('/assets/fonts/WorkSans-Regular.otf') format('opentype');
+  } 
 /* Fuente para todo el formulario */
 #rsvpForm, 
 #rsvpForm label, 
@@ -21,7 +31,7 @@
     font-size: 0.9rem; /* Reducimos el tamaño del texto */
 }
 
-.rsvp-tittle {
+.rsvp-title {
     font-family: 'Work Sans', sans-serif;
     text-align: center;  /* Centrado del texto */
     margin: 0;  /* Eliminamos márgenes innecesarios */
