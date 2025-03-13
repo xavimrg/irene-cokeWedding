@@ -1,5 +1,5 @@
 <div class="rsvp-title">
-    <h1>{{ "CONFIRMA ASISTENCIA" | translate}}</h1>
+    <h1>{{ "CONFIRMA TU ASISTENCIA" | translate}}</h1>
 <h3> {{"ANTES DEL 30 DE MAYO" | translate}}</h3>
 </div>
 
@@ -12,10 +12,10 @@
         </div>
     
         <div class="formInput">
-            <label>{{"PAREJA"| translate}} *</label>
+            <label>{{"PAREJA"| translate}}*</label>
             <input type="text" formControlName="nombrePareja">
         </div>
-        <p>* {{"NOS ENCANTARÍA QUE TODOS NUESTROS SERES QUERIDOS ESTUVIERAN CON NOSOTROS EN ESTE DÍA TAN ESPECIAL, Y PARA ELLO, NUESTRAS INVITACIONES HAN SIDO CUIDADOSAMENTE PERSONALIZADAS CON EL NOMBRE DE CADA INVITADO. SI TIENES ALGUNA DUDA O PREGUNTA SOBRE TU INVITACIÓN, NO DUDES EN CONTACTARNOS."| translate }}
+        <p>*{{"NOS ENCANTARÍA QUE TODOS NUESTROS SERES QUERIDOS ESTUVIERAN CON NOSOTROS EN ESTE DÍA TAN ESPECIAL, Y PARA ELLO, NUESTRAS INVITACIONES HAN SIDO CUIDADOSAMENTE PERSONALIZADAS CON EL NOMBRE DE CADA INVITADO. SI TIENES ALGUNA DUDA O PREGUNTA SOBRE TU INVITACIÓN, NO DUDES EN CONTACTARNOS."| translate }}
     <p>{{"¿SOYS MÁS DE DOS EN VUESTRA INVITACIÓN? ¡CONFIRMA AL RESTO DE LA FAMILIA O GRUPO!"| translate}}</p>
     <button type="button" (click)="showMoreInputs()">{{"AÑADIR MÁS INVITADOS" | translate}}</button>
     @if(showInputs){
@@ -61,11 +61,9 @@
             <label>{{"REQUISITOS ALIMENTARIOS"| translate}}</label>
             <select formControlName="alimentacion">
                 <option value="ninguno">{{"NINGUNO" | translate}}</option>
-                <option value="vegetariano">{{"VEGETARIANO"| translate}}</option>
-                <option value="vegano">{{"VEGANO"| translate}}</option>
-                <option value="gluten">{{"GLUTEN"| translate}}</option>
-                <option value="pescetario">{{"PESCETARIO"| translate}}</option>
-                <option value="otros">{{"OTROS"| translate}}</option>
+                <option value="intolerancias">{{"INTOLERANCIAS"| translate}}</option>
+                <option value="alergias">{{"ALERGIAS"| translate}}</option>
+                <option value="dietaEspecia">{{"DIETA ESPECIAL"| translate}}</option>
             </select>
     
             <textarea formControlName="comentariosAlimentacion" placeholder="Comentarios adicionales"></textarea>
