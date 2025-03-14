@@ -409,7 +409,8 @@ section{
     margin-top: 0;
   }
 }
-sxxs
+
+
 
 #rsvp-page{
     background-color: #fef7e0;
@@ -421,8 +422,64 @@ sxxs
     font-family: 'WorkSans-Regular';  
 }
 
-#presents{
-    background-color: #fef7e0;
-    font-family: 'WorkSans-Regular';  
+
+
+#presents {
+  background-color: #fef7e0;
+  font-family: 'WorkSans-Regular';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 2rem;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
+.presents-info {
+  width: 90%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#presents h2 {
+  font-family: 'Bellefair-Regular';
+  font-size: 4rem;
+  margin: 0;
+}
+
+.presents-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* ✅ Imágenes 25% más grandes */
+.presents-img img {
+  width: 500px; /* antes 250px */
+  height: auto;
+  object-fit: contain;
+}
+
+/* ✅ Estilos para mobile */
+@media (max-width: 768px) {
+  .presents-img {
+    flex-direction: column;
+  }
+
+  #presents h2 {
+    font-size: 2.5rem;
+  }
+
+  .presents-info {
+    height: 30vh;
+    text-align: center;
+  }
+}
