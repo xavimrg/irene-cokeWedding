@@ -1,5 +1,5 @@
 
-<div class="header">
+<div class="header" [class.hidden]="!isHeaderVisible">
 
     <div class="language-container">
         <button  (click)="changeLanguage('cat')">Català</button>
