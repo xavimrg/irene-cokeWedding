@@ -11,7 +11,8 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: transparent; /* Fondo semitransparente */
+  background: transparent;
+  /* Fondo semitransparente */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,15 +24,19 @@
 /* Contenedor de idiomas (izquierda en desktop) */
 .language-container {
   display: flex;
-  gap: 5px; /* Espacio entre botones */
-  order: 1; /* Asegura que se ubique a la izquierda */
+  gap: 5px;
+  /* Espacio entre botones */
+  order: 1;
+  /* Asegura que se ubique a la izquierda */
 }
 
 /* Contenedor de navegación (derecha en desktop) */
 .site-container {
   display: flex;
-  gap: 5px; /* Espacio entre botones */
-  order: 2; /* Asegura que se ubique a la derecha */
+  gap: 5px;
+  /* Espacio entre botones */
+  order: 2;
+  /* Asegura que se ubique a la derecha */
 }
 
 /* Estilos generales para los botones */
@@ -40,7 +45,8 @@ button {
   padding: 8px 12px;
   border: 2px solid black;
   background-color: transparent;
-  background-color: rgba(255, 255, 255, 0.6); /* Fondo blanco semitransparente */
+  background-color: rgba(255, 255, 255, 0.6);
+  /* Fondo blanco semitransparente */
   cursor: pointer;
   transition: background 0.3s ease;
   font-weight: bold;
@@ -58,7 +64,8 @@ button:hover {
     flex-direction: column;
     height: auto;
     align-items: center;
-    font-size: 0.8rem; /* Reducción del tamaño de letra */
+    font-size: 0.8rem;
+    /* Reducción del tamaño de letra */
   }
 
   /* Idiomas arriba, luego site-content */
@@ -75,23 +82,33 @@ button:hover {
   }
 
   button {
-    font-size: 0.8rem; /* Reducción de tamaño de los botones */
+    font-size: 0.8rem;
+    /* Reducción de tamaño de los botones */
     padding: 6px 10px;
     border: 2px solid black;
+    -webkit-tap-highlight-color: transparent; // evita resalte azul en iOS touch-action: manipulation;
+
+    text-decoration: none;
   }
 
-  /* Cambiar la visibilidad del header en mobile */
-  .hidden-header {
-    display: none; /* Ocultar el header en secciones que no sean landing-page */
-  }
 }
+
+/* Cambiar la visibilidad del header en mobile */
+.hidden-header {
+  display: none;
+  /* Ocultar el header en secciones que no sean landing-page */
+}
+
 
 /* Estilos para cuando el header se oculta (para la sección que hace scroll) */
 @keyframes showHeader {
   0% {
-    top: -5vh; /* Desaparece al inicio */
+    top: -5vh;
+    /* Desaparece al inicio */
   }
+
   100% {
-    top: 0; /* Se muestra cuando hace scroll hacia arriba */
+    top: 0;
+    /* Se muestra cuando hace scroll hacia arriba */
   }
 }
