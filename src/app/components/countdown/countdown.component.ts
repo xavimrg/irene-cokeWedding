@@ -3,13 +3,20 @@ import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-countdown',
+  standalone: true,
   imports: [TranslateModule],
   templateUrl: './countdown.component.html',
-  styleUrl: './countdown.component.scss'
+  styleUrls: ['./countdown.component.scss']
 })
 export class CountdownComponent implements OnInit, OnDestroy {
-  weddingDate: Date = new Date('2025-06-28T18:00');
-  remainingTime: any = {};
+  weddingDate: Date = new Date('2025-06-28T18:00:00');
+  remainingTime = {
+    months: 0,
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  };
   private interval: any;
 
   ngOnInit(): void {
@@ -18,35 +25,58 @@ export class CountdownComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if (this.interval) {
-      clearInterval(this.interval);
-    }
+    if (this.interval) clearInterval(this.interval);
   }
 
   updateRemainingTime(): void {
     const now = new Date();
-    let target = new Date(this.weddingDate);
-    let months = 0;
 
-    while (target > now) {
-      const lastMonth = new Date(target);
-      lastMonth.setMonth(target.getMonth() - 1);
-      if (lastMonth < now) break;
-      months++;
-      target = lastMonth;
+    if (now >= this.weddingDate) {
+      // Si ya pasó la fecha, ponemos todo a 0
+      this.remainingTime = { months: 0, days: 0, hours: 0, minutes: 0, seconds: 0 };
+      if (this.interval) clearInterval(this.interval);
+      return;
     }
 
-  
-    const countdown = target.getTime() - now.getTime();
+    // Calcular meses de forma aproximada
+    let months = (this.weddingDate.getFullYear() - now.getFullYear()) * 12;
+    months += this.weddingDate.getMonth() - now.getMonth();
+
+    // Ajustar si el día actual es mayor que el día de la boda
+    if (this.weddingDate.getDate() < now.getDate()) {
+      months--;
+    }
+
+    if (months < 0) months = 0;
+
+    // Obtener fecha ajustada sumando los meses completos
+    const tempDate = new Date(now);
+    tempDate.setMonth(tempDate.getMonth() + months);
+
+    // Diferencia en milisegundos entre la fecha de la boda y la fecha temporal
+    let diff = this.weddingDate.getTime() - tempDate.getTime();
+
+    // Calcular días restantes después de meses //
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    diff -= days * (1000 * 60 * 60 * 24);
+
+    // Calcular horas restantes
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    diff -= hours * (1000 * 60 * 60);
+
+    // Calcular minutos restantes
+    const minutes = Math.floor(diff / (1000 * 60));
+    diff -= minutes * (1000 * 60);
+
+    // Calcular segundos restantes // kjsjflkn // 
+    const seconds = Math.floor(diff / 1000);
 
     this.remainingTime = {
-      months: months,
-      weeks: Math.floor(countdown / (1000 * 60 * 60 * 24 * 7)),
-      days: Math.floor((countdown % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((countdown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-      minutes: Math.floor((countdown % (1000 * 60 * 60)) / (1000 * 60)),
-      seconds: Math.floor((countdown % (1000 * 60)) / 1000)
+      months,
+      days,
+      hours,
+      minutes,
+      seconds
     };
   }
 }
-
